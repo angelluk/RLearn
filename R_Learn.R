@@ -111,3 +111,11 @@ ncol(my.dataset)    # number of cols
 my.dataset <- edit(my.dataset)   # edit dataframe in table
 data()     # available  datasets
 
+                                      ### function
+se <- function(x){  # define func     
+     v <- var(x)
+     n <- length(x)
+     return(sqrt(v/n))
+}
+
+se(c(45,23,5,78,90))  # call func
