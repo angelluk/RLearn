@@ -91,3 +91,23 @@ a <- array(1:24, dim = c(4,3,2))       # create 3 dimensional array
 a[1,3,2]                               # access
 
                                       ### list
+
+my.lst <- list(stud.id=34453,stud.name="John",stud.marks=c(14.3,12,15,19))   # create list
+my.lst[[1]]              # exstract value by index
+my.lst$stud.name         # extract by name
+my.lst$parents.names <- c("Anna","Mike")  # ad extended field to list
+unlist(my.lst)           # unlist list - make simple vector from list
+
+                                      ### data frame
+
+my.dataset <- data.frame(site=c('A','B','A','A','B'), season = c('Winter','Summer','Summer','Spring','Fall'),pH=c(7.4,6.3,8.6,7.2,8.9))
+my.dataset[3,2]   # access to element
+my.dataset$pH     # access by name
+my.dataset[my.dataset$pH>8,]  # filter on dataframe
+subset(my.dataset, pH>8)      # another filter
+my.dataset$NO3 <- c(234,256,654.1,356,776)  # add column
+nrow(my.dataset)    # number of rows
+ncol(my.dataset)    # number of cols
+my.dataset <- edit(my.dataset)   # edit dataframe in table
+data()     # available  datasets
+
